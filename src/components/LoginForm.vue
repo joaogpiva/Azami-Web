@@ -37,6 +37,8 @@ export default defineComponent({
             }).then((response) => {
                 this.isLoading = false;
                 console.log(response.data);
+                localStorage.name = response.data.name;
+                localStorage.loggedIn = true;
                 this.$router.push('/azami-app');
             }).catch((exception) => {
                 this.isLoading = false;

@@ -1,11 +1,16 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import LoginView from '../views/LoginView.vue'
+import SessionRedirector from '../views/SessionRedirectorView.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
+    name: 'session-redirector',
+    component: SessionRedirector
+  },
+  {
+    path: '/login',
     name: 'login',
-    component: LoginView
+    component: () => import('../views/LoginView.vue')
   },
   {
     path: '/azami-app',
