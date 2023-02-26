@@ -1,24 +1,26 @@
 <template>
-  <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center" style="background-color: cadetblue;">
-    <LoginCard />
-  </div>
+  <router-view/>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import LoginCard from './components/LoginCard.vue';
-
-export default defineComponent({
-  name: 'App',
-  components: {
-    LoginCard,
-  }
-});
-</script>
-
 <style>
-.card-login{
-  width: 18rem;
-  padding: 1rem;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
