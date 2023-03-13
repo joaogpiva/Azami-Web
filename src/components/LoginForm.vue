@@ -22,14 +22,15 @@ export default defineComponent({
         return {
             email: "",
             password: "",
-            isLoading: false
+            isLoading: false,
+            apiUrl: this.$apiUrl
         }
     },
     methods: {
         async login(email : string, password : string) : Promise<boolean>{
             this.isLoading = true;
 
-            await axios.get("https://localhost:7134/api/user/login", {
+            await axios.get(this.apiUrl + "/user/login", {
                 params: {
                     email: this.email,
                     password: this.password
