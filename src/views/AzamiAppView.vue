@@ -6,7 +6,7 @@
                     <SideBar />
                 </div>
                 <div class="vr"></div>
-                <div class="col-4">
+                <div class="col-4 overflow-auto" style="height: 100%">
                     <EntryList />
                 </div>
                 <div class="vr"></div>
